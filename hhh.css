@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* scroll-up*/
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #484545;
+  padding: 5px 12px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  min-height: 100vh;
+}
+/* utility classes*/
+.primary-text {
+  color: blue;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+}
+.btn-primary {
+  color: snow;
+  border: 1px solid;
+}
+
+.btn-secondary {
+  color: rgb(0, 0, 0, 0.6);
+  background: snow;
+  border: 1px solid;
+  transition: all 0, 3s ease;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #808080;
+}
+
+/* header Start */
+header {
+  height: 100vh;
+  background: url("plumb3.jpeg") center center/cover no-repeat;
+  position: relative;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+#navbar img {
+  width: 100px;
+  margin-left: 100px;
+}
+#navbar img:hover {
+  transform: rotate(50deg);
+}
+#navbar ul {
+  display: flex;
+  margin-right: 100px;
+}
+#navbar ul li a {
+  padding: 10px 20px;
+  color: snow;
+  font-weight: 600;
+}
+#navbar ul li a:hover,
+.active {
+  background: gray;
+  border-radius: 20px;
+  transition: 0.7s;
+}
+header .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+header.content h {
+  font-size: 100px;
+  color: #fff;
+}
+header.content p {
+  margin: 20px 0 40px;
+  color: #fff;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.6);
+}
+header * {
+  z-index: 15;
+}
+/* Header End */
+
+/* About Start */
+#ABOUT {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: url("back1.jpeg") center center/cover fixed;
+  margin: 20px 0;
+  padding: 4rem 0;
+}
+#ABOUT .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+#ABOUT .about-content img {
+  width: 400px;
+}
+
+#ABOUT .about-content p {
+  color: gray;
+  margin-right: 6rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+#ABOUT .tittle,
+#SERVICE .tittle {
+  text-align: center;
+}
+#ABOUT h2,
+#CONTACTS h2 {
+  text-align: center;
+}
+#CONTACTS,
+#TEAM h3 {
+  justify-self: center;
+  text-align: center;
+  color: gray;
+}
+#ABOUT p {
+  color: gray;
+}
+#SERVICE h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+#CONTACTS,
+#TEAM h3 {
+  justify-self: center;
+  text-align: center;
+  color: gray;
+}
+#TEAM h3 {
+  color: gray;
+}
+#SERVICE p {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h1 {
+  color: white;
+}
+p {
+  color: white;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* About End */
+
+/* Service Start */
+#SERVICE {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  background: url("back1.jpeg") center center/cover fixed;
+  margin: 20px 0;
+  padding: 4rem 0;
+  align-items: center;
+  width: 100%;
+}
+#SERVICE .serviceitems i {
+  top: 50%;
+  background: grey;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 30%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  transform: translateY(-50%);
+}
+#SERVICE .serviceitems i:first-child {
+  left: -0.1px;
+}
+#SERVICE .serviceitems i:last-child {
+  right: -0.1px;
+}
+#SERVICE .serviceitems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 1;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+#SERVICE .serviceitems img {
+  width: 50%;
+  object-fit: cover;
+  margin-left: 14px;
+}
+#SERVICE .serviceitems img:first-child {
+  margin-left: 0px;
+}
+#SERVICE .serviceitems h3 {
+  font-size: 25px;
+  margin: 15px 0;
+}
+#SERVICE .serviceitems P {
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#SERVICE h2 {
+  text-align: center;
+}
+
+#SERVICE .serviceitems .item .item1 {
+  background-color: white;
+  padding: 30px 15px;
+}
+#SERVICE .serviceitems {
+  display: flex;
+  margin-top: 3rem;
+  overflow: hidden;
+  text-align: center;
+  column-gap: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+#SERVICE p {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  background-color: #717171;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Service End*/
+/*team start*/
+#TEAM {
+  background: url("back1.jpeg") center center/cover fixed;
+  padding: 4rem 0;
+}
+
+#TEAM.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mailh{display: none;
+color: #9377ab;}
+.mailh.active{display: block !important;  }
+.item1 {
+  background-color: #fff;
+  display: flex;
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  column-gap: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+
+}
+.item1.active{
+    display: block;
+}
+#TEAM .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  text-align: center;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all 0.3 ease;
+}
+#TEAM .row .item  {
+  background-color: white;
+  padding: 30px 15px;
+}
+#TEAM .row .item:hover {
+  transform: scale(1.04);
+}
+#TEAM .row .item h2 {
+  margin: 15px 0;
+  color: black;
+}
+#TEAM .head img {
+  text-align: center;
+  width: 60px;
+}
+#TEAM h2 {
+  text-align: center;
+}
+
+/*team end*/
+/*contact start*/
+#CONTACTS {
+  padding: 4rem 0;
+  background: url("back1.jpeg") center center/cover fixed;
+  margin: 20px 0;
+}
+#CONTACTS .row {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: white;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  padding: 4rem 4rem;
+  border-radius: 10px;
+  column-gap: 6rem;
+}
+#CONTACTS .row input,
+#CONTACTS .row textarea {
+  display: block;
+  padding: 10px;
+  outline: none;
+  background-color: whitesmoke;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+}
+#CONTACTS h2 {
+  color: black;
+}
+
+#CONTACTS input:focus {
+  outline: 0;
+}
+#CONTACTS.error input {
+  border-color: red;
+}
+#CONTACTS .success input {
+  border-color: #09c372;
+}
+#CONTACTS .error {
+  color: red;
+  font-size: 9px;
+  height: 13px;
+}
+
+/*contact end*/
+/*footer start*/
+#footer {
+  background: #717171;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
